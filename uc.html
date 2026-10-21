@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0e1117">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>UC টপ-আপ – Nex Gen</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M32 3 58 18v28L32 61 6 46V18z' fill='%231a1200' stroke='%23f5a623' stroke-width='4'/%3E%3Ctext x='32' y='40' text-anchor='middle' font-family='Arial' font-weight='900' font-size='22' fill='%23f5a623'%3ENG%3C/text%3E%3C/svg%3E">
+<meta name="description" content="PUBG Mobile UC টপ-আপ দ্রুত ও নিরাপদে। bKash পেমেন্ট।">
+<style>
+:root{--bg:#0e1117;--card:#171c26;--line:#262d3b;--txt:#e8ecf3;--mut:#8b95a7;--acc:#f5a623;--acc2:#ffcb5c;--ok:#2ecc71;color-scheme:dark}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,"Noto Sans Bengali",sans-serif;background:radial-gradient(900px 420px at 50% -90px,rgba(245,166,35,.17),transparent 70%),var(--bg);color:var(--txt);line-height:1.5}
+.wrap{max-width:720px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header{padding:28px 0 18px;text-align:center}
+.logo{font-size:26px;font-weight:800;color:var(--acc)}
+.brand{display:flex;align-items:center;justify-content:center;gap:10px}
+.sub{color:var(--mut);font-size:14px;margin-top:4px}
+.badges{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:14px}
+.badge{background:var(--card);border:1px solid var(--line);border-radius:99px;padding:5px 12px;font-size:12px;color:var(--mut)}
+h2{font-size:17px;margin:26px 0 12px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+@media(min-width:560px){.grid{grid-template-columns:repeat(3,1fr)}}
+.pkg{background:var(--card);border:2px solid var(--line);border-radius:14px;padding:14px;text-align:center;cursor:pointer;transition:.15s}
+.pkg:hover{border-color:#3a4358}
+.pkg.sel{border-color:var(--acc);background:#201b10}
+.pkg .uc{font-size:20px;font-weight:800}
+.pkg .bonus{font-size:12px;color:var(--ok);min-height:18px}
+.pkg .price{margin-top:6px;color:var(--acc2);font-weight:700}
+.box{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px}
+label{display:block;font-size:13px;color:var(--mut);margin:12px 0 5px}
+label:first-child{margin-top:0}
+input,select{width:100%;background:#0e1117;border:1px solid var(--line);border-radius:10px;padding:12px;color:var(--txt);font-size:15px}
+input:focus,select:focus{outline:none;border-color:var(--acc)}
+.pay{display:flex;gap:8px}
+.pay label{flex:1;margin:0;color:var(--txt);background:#0e1117;border:1px solid var(--line);border-radius:10px;padding:10px;text-align:center;cursor:pointer;font-size:14px}
+.pay input{display:none}
+.pay input:checked+span{color:var(--acc);font-weight:700}
+.pay label:has(input:checked){border-color:var(--acc)}
+.info{background:#0e1117;border:1px dashed var(--line);border-radius:10px;padding:12px;font-size:14px;margin-top:12px}
+.info b{color:var(--acc2)}
+.total{display:flex;justify-content:space-between;font-size:16px;font-weight:700;margin-top:14px}
+button.go{width:100%;margin-top:14px;background:var(--acc);color:#1a1200;border:0;border-radius:12px;padding:14px;font-size:16px;font-weight:800;cursor:pointer}
+button.go:disabled{opacity:.5}
+.err{color:#ff6b6b;font-size:13px;margin-top:8px;min-height:18px}
+ol{padding-left:20px;color:var(--mut);font-size:14px}
+ol li{margin:4px 0}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px;margin-bottom:8px;font-size:14px}
+.faq summary{cursor:pointer;font-weight:600}
+.faq p{color:var(--mut);margin-top:8px}
+footer{text-align:center;color:var(--mut);font-size:12px;padding:28px 0 40px}
+.notice{background:#201b10;border:1px solid var(--acc);border-radius:12px;padding:12px 14px;font-size:14px;margin-top:6px}
+.notice b{color:var(--acc2)}
+.pol{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:14px}
+.pol p{margin:4px 0}
+.rev{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:8px;font-size:14px}
+.rev .st{color:var(--acc);letter-spacing:2px}
+.rev .nm{color:var(--mut);font-size:12px;margin-top:4px}
+.revempty{color:var(--mut);font-size:14px;margin-bottom:10px}
+a.revbtn{display:inline-block;margin-top:4px;color:var(--acc2);font-weight:700;font-size:14px}
+.guide{margin-top:8px;background:#0e1117;border:1px dashed var(--line);border-radius:10px;padding:10px 12px;font-size:13px}
+.guide summary{cursor:pointer;color:var(--acc2);font-weight:600}
+.guide ol{margin-top:8px;padding-left:18px;color:var(--txt)}
+.guide li{margin:3px 0}
+.guide p{color:var(--mut);margin-top:6px}
+.prow{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid var(--line)}
+.prow:last-child{border-bottom:0}
+.prow .pp{font-weight:800}
+.prow .pr{color:var(--acc2);font-weight:700}
+.prow a{background:var(--acc);color:#1a1200;border-radius:10px;padding:8px 12px;font-size:13px;font-weight:800;text-decoration:none;white-space:nowrap}
+.pnote{color:var(--mut);font-size:12px;margin-top:10px}
+.popcard{display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--card);border:2px solid var(--line);border-radius:14px;padding:16px;color:var(--txt);text-decoration:none}
+.popcard:hover{border-color:var(--acc)}
+.popcard b{font-size:17px}
+.popcard small{display:block;color:var(--mut);font-size:13px;margin-top:2px}
+.popcard span{color:var(--acc2);font-weight:700;white-space:nowrap}
+html{background:#0e1117}
+a,button,summary,.tile,.pkg{-webkit-tap-highlight-color:transparent}
+a:focus:not(:focus-visible){outline:none}
+@view-transition{navigation:auto}
+@keyframes pgin{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes vtout{to{opacity:0}}
+@keyframes vtin{from{opacity:0}}
+.wrap{animation:pgin .35s ease-out both}
+::view-transition-old(root){animation:.2s ease-in both vtout}
+::view-transition-new(root){animation:.3s ease-out both vtin}
+.tile:active,.popcard:active{transform:scale(.97)}
+@media (prefers-reduced-motion:reduce){.wrap{animation:none}::view-transition-old(root),::view-transition-new(root){animation:none}.tile:active,.popcard:active{transform:none}}
+</style>
+
+
+
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="brand" href="./" aria-label="হোম পেজ" style="text-decoration:none"><svg width="48" height="48" viewBox="0 0 64 64" aria-label="NG logo"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffcb5c"/><stop offset="1" stop-color="#f5a623"/></linearGradient></defs><path d="M32 3 58 18v28L32 61 6 46V18z" fill="#1a1200" stroke="url(#lg)" stroke-width="3" stroke-linejoin="round"/><text x="32" y="40" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="22" fill="url(#lg)">NG</text></svg><span class="logo" id="shopName">Nex Gen</span></a>
+  <div class="sub">PUBG Mobile UC টপ-আপ — দ্রুত ও সহজ</div>
+  <div class="badges"><span class="badge">⚡ দ্রুত ডেলিভারি</span><span class="badge">💬 ২৪/৭ সাপোর্ট</span><span class="badge">📱 bKash</span><span class="badge">🕙 সকাল ১০টা - রাত ১০টা</span></div>
+</header>
+<a href="./" style="display:inline-block;margin-top:10px;color:var(--acc2);font-size:14px;text-decoration:none;font-weight:600">← হোমে ফিরে যান</a>
+<div class="notice"><b>📢 নোটিশ:</b> এই সাইটের UC শুধুমাত্র বাংলাদেশি সার্ভার বা রিজিয়নের অ্যাকাউন্টের জন্য প্রযোজ্য।</div>
+
+<h2>১. প্যাকেজ বেছে নিন</h2>
+<div class="grid" id="pkgs"></div>
+
+<h2>২. অর্ডারের তথ্য</h2>
+<div class="box">
+  <label>PUBG Mobile Player ID</label>
+  <input id="pid" inputmode="numeric" placeholder="যেমন: 5123456789">
+  <details class="guide"><summary>📍 Player ID কোথায় পাবো?</summary>
+    <ol>
+      <li>PUBG Mobile খুলে লবিতে যান।</li>
+      <li>উপরের বাঁ দিকে আপনার প্রোফাইল ছবিতে ট্যাপ করুন।</li>
+      <li>নামের নিচে ID নম্বর দেখতে পাবেন। পাশের কপি আইকনে চেপে কপি করে এখানে পেস্ট করুন।</li>
+    </ol>
+    <p>গেমের ভার্সন অনুযায়ী জায়গা সামান্য আলাদা হতে পারে। ID শুধু সংখ্যার হয়।</p>
+  </details>
+  <label>গেমে আপনার নাম (ঐচ্ছিক)</label>
+  <input id="pname" placeholder="In-game name">
+  <label>পেমেন্ট মাধ্যম</label>
+  <div class="pay" id="pay"></div>
+  <div class="info" id="payInfo"></div>
+  <label>Transaction ID (পেমেন্ট করার পর)</label>
+  <input id="trx" maxlength="14" autocapitalize="characters" autocomplete="off" placeholder="যেমন: 9A7B3C2D1E">
+  <div class="total"><span>মোট</span><span id="total">৳0</span></div>
+  <button class="go" id="go">WhatsApp-এ অর্ডার পাঠান</button>
+  <div class="err" id="err"></div>
+</div>
+
+<h2>নীতিমালা</h2>
+<div class="pol">
+  <p>🕙 অর্ডারের সময়: সকাল ১০টা থেকে রাত ১০টা।</p>
+  <p>⚠️ ভুল UID দিয়ে UC অর্ডার করার পর টাকা ফেরত নেই। অর্ডারের আগে Player ID ভালো করে মিলিয়ে নিন।</p>
+</div>
+
+<h2>কিভাবে অর্ডার করবেন</h2>
+<ol>
+  <li>প্যাকেজ সিলেক্ট করুন ও Player ID দিন।</li>
+  <li>নির্দেশিত নম্বরে <b>Send Money</b> করুন।</li>
+  <li>Transaction ID বসিয়ে অর্ডার বাটনে চাপ দিন।</li>
+  <li>WhatsApp-এ মেসেজ যাবে, পেমেন্ট যাচাইয়ের পর UC টপ-আপ হবে।</li>
+</ol>
+
+<h2>সাধারণ প্রশ্ন</h2>
+<div class="faq">
+  <details><summary>কত সময় লাগে?</summary><p>পেমেন্ট যাচাইয়ের পর সাধারণত ৫–৩০ মিনিট।</p></details>
+  <details><summary>ভুল ID দিলে?</summary><p>অর্ডারের আগে ID ভালো করে মিলিয়ে নিন। ভুল ID-তে পাঠানো টপ-আপ ফেরত দেওয়া সম্ভব নয়।</p></details>
+  <details><summary>পাসওয়ার্ড লাগবে?</summary><p>না। শুধু Player ID লাগে। কাউকে পাসওয়ার্ড বা OTP দেবেন না।</p></details>
+</div>
+
+<footer>© <span id="yr"></span> <span id="shopName2"></span> • এটি একটি স্বাধীন রিসেলার সাইট। PUBG Mobile ও UC তাদের নিজ নিজ মালিকের ট্রেডমার্ক; এই সাইট Krafton/Tencent-এর অফিসিয়াল নয়।</footer>
+</div>
+
+<script>
+/* ====== এখানে নিজের তথ্য বসান ====== */
+const CONFIG = {
+  shopName: "Nex Gen",
+  whatsapp: "8801894673731",
+  methods: {
+    "bKash": "01894673731 (Personal)"
+  },
+  // সত্যিকারের কাস্টমার রিভিউ এখানে বসান। উদাহরণ:
+  // {name:"রাফি", text:"দ্রুত UC পেয়েছি।", stars:5},
+  reviews: [
+  ],
+  packages: [
+    {uc:60,   bonus:"",             price:125},
+    {uc:300,  bonus:"+ বোনাস 25",   price:600},
+    {uc:600,  bonus:"+ বোনাস 60",   price:1200},
+    {uc:1500, bonus:"+ বোনাস 300",  price:3000},
+    {uc:6000, bonus:"+ বোনাস 2100", price:12000}
+  ]
+};
+/* ===================================== */
+
+const bn = n => String(n).replace(/\d/g, d => "০১২৩৪৫৬৭৮৯"[d]);
+let sel = null, method = Object.keys(CONFIG.methods)[0];
+const $ = id => document.getElementById(id);
+$("shopName").textContent = CONFIG.shopName;
+$("shopName2").textContent = CONFIG.shopName;
+$("yr").textContent = new Date().getFullYear();
+
+$("pkgs").innerHTML = CONFIG.packages.map((p,i)=>
+  `<div class="pkg" data-i="${i}"><div class="uc">${p.uc} UC</div><div class="bonus">${p.bonus}</div><div class="price">৳${bn(p.price)}</div></div>`).join("");
+$("pkgs").addEventListener("click", e=>{
+  const el = e.target.closest(".pkg"); if(!el) return;
+  document.querySelectorAll(".pkg").forEach(x=>x.classList.remove("sel"));
+  el.classList.add("sel"); sel = CONFIG.packages[el.dataset.i];
+  $("total").textContent = "৳" + bn(sel.price); renderInfo();
+});
+
+$("pay").innerHTML = Object.keys(CONFIG.methods).map((m,i)=>
+  `<label><input type="radio" name="m" value="${m}" ${i?"":"checked"}><span>${m}</span></label>`).join("");
+$("pay").addEventListener("change", e=>{ method = e.target.value; renderInfo(); });
+
+function renderInfo(){
+  $("payInfo").innerHTML = `${method} নম্বর: <b>${CONFIG.methods[method]}</b><br>` +
+    (sel ? `পাঠাতে হবে: <b>৳${bn(sel.price)}</b> (Send Money)` : "প্রথমে প্যাকেজ সিলেক্ট করুন");
+}
+renderInfo();
+
+$("go").onclick = () => {
+  const pid = $("pid").value.trim(), trx = $("trx").value.trim().toUpperCase().replace(/\s+/g,""), name = $("pname").value.trim();
+  const err = $("err"); err.style.color = ""; err.textContent = "";
+  if(!sel) return err.textContent = "একটি প্যাকেজ সিলেক্ট করুন।";
+  if(!/^\d{6,12}$/.test(pid)) return err.textContent = "সঠিক Player ID দিন (শুধু সংখ্যা)।";
+  if(!/^[A-Z0-9]{10}$/.test(trx) || /^(.)\1+$/.test(trx)) return err.textContent = "সঠিক Transaction ID দিন। bKash-এর SMS থেকে দেখে বসান।";
+  let used = [];
+  try { used = JSON.parse(localStorage.getItem("usedTrx") || "[]"); } catch(e) {}
+  if(used.includes(trx)) return err.textContent = "এই Transaction ID আগে ব্যবহার করা হয়েছে। নতুন পেমেন্টের ID দিন।";
+  try { used.push(trx); localStorage.setItem("usedTrx", JSON.stringify(used)); } catch(e) {}
+  const msg = `নতুন অর্ডার\nপ্যাকেজ: ${sel.uc} UC\nমূল্য: ৳${sel.price}\nPlayer ID: ${pid}\nনাম: ${name||"-"}\nপেমেন্ট: ${method}\nTrxID: ${trx}`;
+  const url = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(msg)}`;
+  err.style.color = "var(--ok)";
+  err.innerHTML = `✅ প্রায় শেষ! <a href="${url}" target="_blank" rel="noopener" style="color:var(--ok);font-weight:700">এখানে চাপ দিয়ে WhatsApp-এ অর্ডার পাঠান</a>`;
+  try { window.open(url, "_blank"); } catch(e) {}
+};
+</script>
+</body>
+</html>
