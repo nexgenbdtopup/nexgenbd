@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0e1117">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Popularity – Nex Gen</title>
+<style>
+:root{--bg:#0e1117;--card:#171c26;--line:#262d3b;--txt:#e8ecf3;--mut:#8b95a7;--acc:#f5a623;--acc2:#ffcb5c;--ok:#2ecc71;color-scheme:dark}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,"Noto Sans Bengali",sans-serif;background:radial-gradient(900px 420px at 50% -90px,rgba(245,166,35,.17),transparent 70%),var(--bg);color:var(--txt);line-height:1.5}
+.wrap{max-width:720px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-bottom:40px}
+.back{display:inline-block;margin-top:12px;color:var(--acc2);font-size:14px;text-decoration:none;font-weight:600}
+h1{font-size:24px;margin:14px 0 4px;color:var(--acc)}
+.sub{color:var(--mut);font-size:14px}
+.list{margin-top:18px;display:grid;gap:10px}
+.item{background:var(--card);border:2px solid var(--line);border-radius:14px;padding:14px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.item .pp{font-size:18px;font-weight:800}
+.item .nm{color:var(--mut);font-size:13px}
+.item .pr{color:var(--acc2);font-weight:800;font-size:18px;white-space:nowrap}
+.item a.buy{display:block;margin-top:8px;background:var(--acc);color:#1a1200;border-radius:10px;padding:9px 14px;font-size:14px;font-weight:800;text-decoration:none;text-align:center}
+.right{text-align:right}
+.empty{color:var(--mut);font-size:14px}
+.pol{margin-top:22px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:14px}
+.pol p{margin:4px 0}
+footer{text-align:center;color:var(--mut);font-size:12px;padding:26px 0 0}
+.brand{display:flex;align-items:center;gap:8px;margin-top:18px;text-decoration:none;color:var(--acc);font-size:20px;font-weight:800}
+html{background:#0e1117}
+a,button,summary,.tile,.pkg{-webkit-tap-highlight-color:transparent}
+a:focus:not(:focus-visible){outline:none}
+@view-transition{navigation:auto}
+@keyframes pgin{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes vtout{to{opacity:0}}
+@keyframes vtin{from{opacity:0}}
+.wrap{animation:pgin .35s ease-out both}
+::view-transition-old(root){animation:.2s ease-in both vtout}
+::view-transition-new(root){animation:.3s ease-out both vtin}
+.tile:active,.popcard:active{transform:scale(.97)}
+@media (prefers-reduced-motion:reduce){.wrap{animation:none}::view-transition-old(root),::view-transition-new(root){animation:none}.tile:active,.popcard:active{transform:none}}
+h2.st{font-size:16px;margin:22px 0 10px}
+.item{cursor:pointer;transition:.15s;-webkit-tap-highlight-color:transparent}
+.item.sel{border-color:var(--acc);background:#201b10}
+.box{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px}
+label{display:block;font-size:13px;color:var(--mut);margin:0 0 5px}
+input{width:100%;background:#0e1117;border:1px solid var(--line);border-radius:10px;padding:12px;color:var(--txt);font-size:15px}
+input:focus{outline:none;border-color:var(--acc)}
+.guide{margin-top:8px;background:#0e1117;border:1px dashed var(--line);border-radius:10px;padding:10px 12px;font-size:13px}
+.guide summary{cursor:pointer;color:var(--acc2);font-weight:600}
+.guide ol{margin-top:8px;padding-left:18px}
+.guide li{margin:3px 0}
+.guide p{color:var(--mut);margin-top:6px}
+.total{display:flex;justify-content:space-between;font-size:16px;font-weight:700;margin-top:14px}
+button.go{width:100%;margin-top:14px;background:var(--acc);color:#1a1200;border:0;border-radius:12px;padding:14px;font-size:16px;font-weight:800;cursor:pointer}
+.err{color:#ff6b6b;font-size:13px;margin-top:8px;min-height:18px}
+.item.out{opacity:.55;cursor:not-allowed}
+.oos{display:inline-block;margin-top:4px;background:#3a1518;color:#ff6b6b;border:1px solid #6b2328;border-radius:99px;padding:2px 10px;font-size:12px;font-weight:700}
+button.go:disabled{opacity:.5;cursor:not-allowed}
+.gh{margin:8px 0 -2px;color:var(--acc2);font-size:13px;font-weight:700;letter-spacing:.5px;text-transform:uppercase}
+.list .gh:first-child{margin-top:0}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="brand" href="./" aria-label="হোম পেজ"><svg width="34" height="34" viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="lg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffcb5c"/><stop offset="1" stop-color="#f5a623"/></linearGradient></defs><path d="M32 3 58 18v28L32 61 6 46V18z" fill="#1a1200" stroke="url(#lg2)" stroke-width="3" stroke-linejoin="round"/><text x="32" y="40" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="22" fill="url(#lg2)">NG</text></svg><span>Nex Gen</span></a>
+  <a class="back" href="./">← মূল পেজে ফিরে যান</a>
+  <h1>⭐ Popularity</h1>
+  <div class="sub">প্যাকেজ বেছে Player ID দিন, WhatsApp-এ অর্ডার চলে যাবে।</div>
+
+  <h2 class="st">১. প্যাকেজ বেছে নিন</h2>
+  <div class="list" id="list"></div>
+
+  <h2 class="st">২. Player ID দিন</h2>
+  <div class="box">
+    <label for="pid">PUBG Mobile Player ID</label>
+    <input id="pid" inputmode="numeric" autocomplete="off" placeholder="যেমন: 5123456789">
+    <details class="guide"><summary>📍 Player ID কোথায় পাবো?</summary>
+      <ol>
+        <li>PUBG Mobile খুলে লবিতে যান।</li>
+        <li>উপরের বাঁ দিকে আপনার প্রোফাইল ছবিতে ট্যাপ করুন।</li>
+        <li>নামের নিচে ID নম্বর দেখতে পাবেন। পাশের কপি আইকনে চেপে কপি করে এখানে পেস্ট করুন।</li>
+      </ol>
+      <p>গেমের ভার্সন অনুযায়ী জায়গা সামান্য আলাদা হতে পারে। ID শুধু সংখ্যার হয়।</p>
+    </details>
+    <div class="total"><span>মোট</span><span id="total">৳0</span></div>
+    <button class="go" id="go">WhatsApp-এ অর্ডার পাঠান</button>
+    <div class="err" id="err"></div>
+  </div>
+
+  <div class="pol">
+    <p>🕙 অর্ডারের সময়: সকাল ১০টা থেকে রাত ১০টা।</p>
+    <p>⚠️ ভুল UID দিয়ে অর্ডার করার পর টাকা ফেরত নেই। অর্ডারের আগে Player ID ভালো করে মিলিয়ে নিন।</p>
+    <p>🔒 পাসওয়ার্ড বা লগইন তথ্য কখনো দেবেন না। শুধু Player ID লাগে।</p>
+  </div>
+
+  <footer>এটি একটি স্বাধীন রিসেলার সাইট। PUBG Mobile তার মালিকের ট্রেডমার্ক; এই সাইট Krafton/Tencent-এর অফিসিয়াল নয়।</footer>
+</div>
+
+<script>
+/* ====== Popularity প্যাকেজ এখানে বসান ====== */
+const CONFIG = {
+  whatsapp: "8801894673731",
+  items: [
+    {g:"Mix", points:"20K", label:"20K Mix Popularity", price:160},
+    {g:"Mix", points:"40K", label:"40K Mix Popularity", price:320},
+    {g:"Card", points:"50,000", price:450, out:true},
+    {g:"Mix", points:"60K", label:"60K Mix Popularity", price:480},
+    {g:"Mix", points:"80K", label:"80K Mix Popularity", price:640},
+    {g:"Mix", points:"100K", label:"100K Mix Popularity", price:800}
+    // g:"Mix" বা g:"Card" দিয়ে গ্রুপ ঠিক হয়। out:true মানে স্টক নেই। আবার চালু করতে out:true মুছে দিন।
+    // নতুন প্যাকেজ যোগ করতে আগের লাইনের শেষে কমা দিয়ে নতুন লাইন লিখুন।
+  ]
+};
+/* ========================================== */
+
+const $ = id => document.getElementById(id);
+const bn = n => String(n).replace(/\d/g, d => "০১২৩৪৫৬৭৮৯"[d]);
+const esc = t => String(t).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const avail = CONFIG.items.filter(p => !p.out);
+let sel = avail.length === 1 ? avail[0] : null;
+if (sel) $("total").textContent = "৳" + bn(sel.price);
+if (!avail.length) { $("go").disabled = true; $("go").textContent = "স্টক নেই"; }
+
+const row = (p,i) => `<div class="item${sel===p?" sel":""}${p.out?" out":""}" data-i="${i}"><div><div class="pp">${esc(p.label || (p.points + " Card Popularity"))}</div>${p.out?'<span class="oos">Out of Stock</span>':""}</div><div class="right"><div class="pr">৳${bn(p.price)}</div></div></div>`;
+const groups = [["Card","Card Popularity"],["Mix","Mix Popularity"]];
+$("list").innerHTML = CONFIG.items.length
+  ? groups.map(([k,title]) => {
+      const rows = CONFIG.items.map((p,i) => p.g === k ? row(p,i) : "").join("");
+      return rows ? `<div class="gh">${title}</div>${rows}` : "";
+    }).join("")
+  : '<div class="empty">প্যাকেজ শীঘ্রই আসছে।</div>';
+
+$("list").addEventListener("click", e => {
+  const el = e.target.closest(".item"); if (!el) return;
+  if (CONFIG.items[el.dataset.i].out) return;
+  document.querySelectorAll(".item").forEach(x => x.classList.remove("sel"));
+  el.classList.add("sel"); sel = CONFIG.items[el.dataset.i];
+  $("total").textContent = "৳" + bn(sel.price);
+});
+
+$("go").onclick = () => {
+  const err = $("err"); err.style.color = ""; err.textContent = "";
+  const pid = $("pid").value.trim();
+  if (!avail.length) return err.textContent = "এই মুহূর্তে সব প্যাকেজের স্টক নেই। পরে আবার দেখুন।";
+  if (!sel) return err.textContent = "একটি প্যাকেজ সিলেক্ট করুন।";
+  if (!/^\d{6,12}$/.test(pid)) return err.textContent = "সঠিক Player ID দিন (শুধু সংখ্যা)।";
+  const msg = `Popularity অর্ডার\nপ্যাকেজ: ${sel.label || (sel.points + " Card Popularity")}\nমূল্য: ৳${sel.price}\nPlayer ID: ${pid}`;
+  const url = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(msg)}`;
+  err.style.color = "var(--ok)";
+  err.innerHTML = `✅ প্রায় শেষ! <a href="${url}" target="_blank" rel="noopener" style="color:var(--ok);font-weight:700">এখানে চাপ দিয়ে WhatsApp-এ অর্ডার পাঠান</a>`;
+  try { window.open(url, "_blank"); } catch (e) {}
+};
+</script>
+</body>
+</html>
